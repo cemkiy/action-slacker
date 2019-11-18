@@ -15,7 +15,7 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       uses: cemkiy/action-islack@master
-      inputs:
+      with:
         fallback: 'Required plain-text summary of the attachment.'
         color": '#36a64f'
         pretext": 'Optional text that appears above the attachment block'
