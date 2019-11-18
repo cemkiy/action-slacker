@@ -36,7 +36,6 @@ inputs:
     description: 'thumb url'
     required: false
     default: '1000'
-    'http://example.com/path/to/thumb.png'
   footer":
     description: 'footer text'
     required: false
