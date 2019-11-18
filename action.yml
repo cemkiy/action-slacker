@@ -1,5 +1,8 @@
 name: 'action-islack'
 description: 'send slack notify'
+branding:
+  icon: 'at-sign'
+  color: 'purple'
 env:
   SLACK_WEBHOOK:
     description: 'required'

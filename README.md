@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/cemkiy/action-islack/workflows/Main/badge.svg?branch=develop)](https://github.com/cemkiy/action-islack/actions)
+[![Actions Status](https://github.com/cemkiy/action-islack/workflows/Main/badge.svg?branch=master)](https://github.com/cemkiy/action-islack/actions)
 
 # action-islack
 
