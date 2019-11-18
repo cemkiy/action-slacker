@@ -1,5 +1,4 @@
 const core = require('@actions/core');
-const wait = require('./wait');
 
 const SLACK_WEBHOOK = process.env.SLACK_WEBHOOK;
 const slack = require('slack-notify')(SLACK_WEBHOOK);

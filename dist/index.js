@@ -1374,7 +1374,6 @@ module.exports = {
 /***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
 
 const core = __webpack_require__(470);
-const wait = __webpack_require__(136);
 
 const SLACK_WEBHOOK = process.env.SLACK_WEBHOOK;
 const slack = __webpack_require__(553)(SLACK_WEBHOOK);
@@ -1637,14 +1636,6 @@ exports.plaintext = plaintext
 exports.sign = sign
 exports.rfc3986 = rfc3986
 exports.generateBase = generateBase
-
-/***/ }),
-
-/***/ 136:
-/***/ (function() {
-
-eval("require")("./wait");
-
 
 /***/ }),
 
