@@ -1,0 +1,32 @@
+{
+  "name": "action-islack",
+  "version": "1.0.0",
+  "description": "send slack notification with advanced message format",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js",
+    "package": "ncc build index.js -o dist",
+    "test": "eslint index.js && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cemkiy/action-islack.git"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "Slack"
+  ],
+  "author": "GitHub",
+  "license": "MIT",
+  "homepage": "https://github.com/cemkiy/action-islack#readme",
+  "dependencies": {
+    "@actions/core": "^1.1.1",
+    "slack-notify": "^0.1.7"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.20.5",
+    "eslint": "^6.3.0",
+    "jest": "^24.9.0"
+  }
+}

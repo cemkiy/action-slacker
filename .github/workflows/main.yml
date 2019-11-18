@@ -1,0 +1,31 @@
+name: Notification on push
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Slack notification
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+      uses: cemkiy/action-islack@master
+      inputs:
+        fallback: 'Required plain-text summary of the attachment.'
+        color": '#36a64f'
+        pretext": 'Optional text that appears above the attachment block'
+        author_name": 'Bobby Tables'
+        author_link": 'http://flickr.com/bobby/'
+        author_icon": 'http://flickr.com/icons/bobby.jpg'
+        title": 'Slack API Documentation'
+        title_link": 'https://api.slack.com/'
+        text": 'Optional text that appears within the attachment'
+        image_url": 'http://my-website.com/path/to/image.jpg'
+        thumb_url": 'http://example.com/path/to/thumb.png'
+        footer": 'Slack API'
+        footer_icon": 'https://platform.slack-edge.com/img/default_application_icon.png'
