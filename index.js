@@ -32,7 +32,7 @@ async function run() {
       required: false
     });
     attachment.text = core.getInput('text', {
-      required: true
+      required: false
     });
     attachment.image_url = core.getInput('image_url', {
       required: false
