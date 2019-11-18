@@ -46,6 +46,15 @@ inputs:
   footer_icon":
     description: 'footer icon'
     required: false
+  channel":
+    description: 'slack channel name with #'
+    required: true
+  icon_url":
+    description: 'slack user icon'
+    required: false
+  username":
+    description: 'slack username'
+    required: true
 outputs:
   time: # output will be available to future steps
     description: 'The message to output'

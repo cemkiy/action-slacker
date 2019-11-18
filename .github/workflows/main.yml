@@ -16,6 +16,8 @@ jobs:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       uses: cemkiy/action-islack@master
       with:
+        channel: '#team-devops'
+        username: 'github'
         fallback: 'Required plain-text summary of the attachment.'
         color: '#36a64f'
         pretext: 'Optional text that appears above the attachment block'
