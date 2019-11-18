@@ -1,7 +1,9 @@
 name: 'slack'
 description: 'send slack notify'
 env:
-  SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+  SLACK_WEBHOOK:
+    description: 'required'
+    required: true
 inputs:
   fallback:
     description: 'Required plain-text summary of the attachment.'
