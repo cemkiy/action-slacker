@@ -1,4 +1,4 @@
-name: 'slack'
+name: 'action-islack'
 description: 'send slack notify'
 env:
   SLACK_WEBHOOK:
