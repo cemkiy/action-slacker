@@ -51,7 +51,7 @@ inputs:
     required: true
   icon_url":
     description: 'slack user icon'
-    required: false
+    required: true
   username":
     description: 'slack username'
     required: true

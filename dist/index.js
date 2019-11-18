@@ -1429,12 +1429,16 @@ async function run() {
     const channel = core.getInput('channel', {
       required: true
     });
+    const icon_url = core.getInput('icon_url', {
+      required: true
+    });
     const username = core.getInput('username', {
       required: true
     });
 
     slack.send({
       channel: channel,
+      icon_url: icon_url,
       username: username,
       text: `${process.env.GITHUB_REPOSITORY}/${process.env.GITHUB_WORKFLOW} to ${process.env.GITHUB_REF.split("/")[2]} triggered by ${process.env.GITHUB_ACTOR} (${process.env.GITHUB_EVENT_NAME})\n`,
       attachments: [attachment]
