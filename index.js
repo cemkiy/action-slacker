@@ -3,6 +3,10 @@ const core = require('@actions/core');
 const SLACK_WEBHOOK = process.env.SLACK_WEBHOOK;
 const slack = require('slack-notify')(SLACK_WEBHOOK);
 
+slack.onError = function (err) {
+  core.error(`Error ${err}, action may still succeed though`);
+};
+
 // most @actions toolkit packages have async methods
 async function run() {
   try {
