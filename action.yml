@@ -1,0 +1,51 @@
+name: 'slack'
+description: 'send slack notify'
+inputs:
+  fallback:
+    description: 'Required plain-text summary of the attachment.'
+    required: false
+  color":
+    description: 'tag color'
+    required: false
+    default: '#36a64f'
+  pretext":
+    description: 'Optional text that appears above the attachment block'
+    required: false
+  author_name":
+    description: 'sender name'
+    required: false
+  author_link":
+    description: 'sender profile link'
+    required: false
+  author_icon":
+    description: 'sender icon'
+    required: false
+  title":
+    description: 'message title'
+    required: false
+  title_link":
+    description: 'message title link'
+    required: false
+  text":
+    description: 'message text'
+    required: false
+  image_url":
+    description: 'image url'
+    required: false
+  thumb_url":
+    description: 'thumb url'
+    required: false
+    default: '1000'
+    'http://example.com/path/to/thumb.png'
+  footer":
+    description: 'footer text'
+    required: false
+  footer_icon":
+    description: 'footer icon'
+    required: false
+outputs:
+  time: # output will be available to future steps
+    description: 'The message to output'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
