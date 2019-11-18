@@ -1,4 +1,4 @@
-name: Notification on push
+name: Main
 
 on:
   push:
@@ -11,12 +11,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Slack notification
+    - name: Slack notification success
+      if: success()
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       uses: cemkiy/action-islack@master
       with:
         channel: '#team-devops'
         username: 'github'
-        icon_url: 'https://storage.googleapis.com/slack-images-cyclops/ci/rShq67tG_400x400.png'
+        icon_url: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
         image_url: 'https://storage.googleapis.com/slack-images-cyclops/ci/It_Compiles_Ship_It.png'
+
+    - name: Slack notification failure
+      if: failure()
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+      uses: cemkiy/action-islack@master
+      with:
+        channel: '#team-devops'
+        username: 'github'
+        icon_url: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
+        image_url: 'https://media.giphy.com/media/njYrp176NQsHS/giphy.gif'
