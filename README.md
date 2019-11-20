@@ -90,3 +90,11 @@ If you want to show different messages based on succes or failure of previous st
 ## Contributing
 
 Please see [API documentation](https://api.slack.com/docs/messages/builder) in addition to source code in this repository.
+
+## License
+
+[MIT](LICENSE) © 2019 Cem Kıy
+
+## Does this interest you?
+
+Join us at <a href="https://arge.biges.com/">Biges R&D</a> where we create software and hardware for physical security needs.
