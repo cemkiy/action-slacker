@@ -87,6 +87,6 @@ If you want to show different messages based on succes or failure of previous st
     image_url: 'http://my-website.com/path/to/success.jpg'
 ```
 
-## Contributing
+## Contributing
 
 Please see [API documentation](https://api.slack.com/docs/messages/builder) in addition to source code in this repository.
