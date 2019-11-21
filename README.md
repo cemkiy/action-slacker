@@ -1,18 +1,18 @@
 [![Actions Status](https://github.com/cemkiy/action-slacker/workflows/Main/badge.svg?branch=master)](https://github.com/cemkiy/action-slacker/actions)
 
-# action-slacker
 
-You can send slack message easily. slacker is supported slack attachments.
-Detail info:  https://api.slack.com/docs/messages/builder
+# Slack - Github Action
 
-## Configurations
+A [Github Action](https://github.com/features/actions) to send a message to a Slack channel that supports attachments like images.
 
-You sould set 'SLACK_WEBHOOK' variable to your repo secrets in settings page.
-Detail info: [help.github.com/...](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets#creating-encrypted-secrets)
+## Configuration
+
+You must set `SLACK_WEBHOOK` environment value in settings page of your repository in order to use without any problem. Please [see here](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets#creating-encrypted-secrets) to learn how to do it if you don't know already.
 
 ## Usage
 
-Create a workflow and set a step like this.
+Create a workflow, set a step that uses this action and don't forget to specify `SLACK_WEBHOOK` environment value.
+
 ```yaml
 name: Notification on push
 
@@ -23,9 +23,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - name: Slack notification
       env:
@@ -54,16 +52,17 @@ jobs:
 
 ## Output
 
-slacker has default output about your git event.
+Default output if you've not set any attachment will look like this.
+
 ```sh
 cemkiy/action-slacker/Notification on push to master triggered by cemkiy (push)
 ```
 
-If you set attachment fields, you should see advanced message in your slack. But default message is always sending.
+If you've set an attachment, you should see it in addition to default message.
 
 ## Advanced Usage
 
-If you want show different messages in your workflow, use success and failure func.
+If you want to show different messages based on succes or failure of previous steps in your workflow, use success and failure functions.
 
 ```yaml
 - name: Slack notification Failure
@@ -88,3 +87,15 @@ If you want show different messages in your workflow, use success and failure fu
     username: 'slack username'
     image_url: 'http://my-website.com/path/to/success.jpg'
 ```
+
+## Contributing
+
+Please see [API documentation](https://api.slack.com/docs/messages/builder) in addition to source code in this repository.
+
+## License
+
+[MIT](LICENSE) © 2019 Cem Kıy
+
+## Does this interest you?
+
+Join us at <a href="https://arge.biges.com/">Biges R&D</a> where we create software and hardware for physical security needs.
