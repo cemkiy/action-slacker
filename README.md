@@ -1,4 +1,5 @@
-[![Actions Status](https://github.com/cemkiy/action-islack/workflows/Main/badge.svg?branch=master)](https://github.com/cemkiy/action-islack/actions)
+[![Actions Status](https://github.com/cemkiy/action-slacker/workflows/Main/badge.svg?branch=master)](https://github.com/cemkiy/action-slacker/actions)
+
 
 # Slack - Github Action
 
@@ -27,7 +28,7 @@ jobs:
     - name: Slack notification
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-      uses: cemkiy/action-islack@master
+      uses: cemkiy/action-slacker@master
       with:
         # requirements fields for slack
         channel: '#channel-name'
@@ -54,7 +55,7 @@ jobs:
 Default output if you've not set any attachment will look like this.
 
 ```sh
-cemkiy/action-islack/Notification on push to master triggered by cemkiy (push)
+cemkiy/action-slacker/Notification on push to master triggered by cemkiy (push)
 ```
 
 If you've set an attachment, you should see it in addition to default message.
@@ -68,7 +69,7 @@ If you want to show different messages based on succes or failure of previous st
   if: failure()
   env:
     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-  uses: cemkiy/action-islack@master
+  uses: cemkiy/action-slacker@master
   with:
     channel: '#channel-name'
     icon_url: 'slack user icon url'
@@ -79,7 +80,7 @@ If you want to show different messages based on succes or failure of previous st
   if: success()
   env:
     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-  uses: cemkiy/action-islack@master
+  uses: cemkiy/action-slacker@master
   with:
     channel: '#channel-name'
     icon_url: 'slack user icon url'

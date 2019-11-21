@@ -16,7 +16,7 @@ jobs:
       if: success()
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-      uses: cemkiy/action-islack@master
+      uses: cemkiy/action-slacker@master
       with:
         channel: '#team-devops'
         username: 'github'
@@ -27,7 +27,7 @@ jobs:
       if: failure()
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-      uses: cemkiy/action-islack@master
+      uses: cemkiy/action-slacker@master
       with:
         channel: '#team-devops'
         username: 'github'
