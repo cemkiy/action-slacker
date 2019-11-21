@@ -54,9 +54,7 @@ jobs:
 
 Default output if you've not set any attachment will look like this.
 
-```sh
-cemkiy/action-slacker/Notification on push to master triggered by cemkiy (push)
-```
+![Image of screenshot](https://raw.githubusercontent.com/cemkiy/action-slacker/master/screnshot.png)
 
 If you've set an attachment, you should see it in addition to default message.
 
