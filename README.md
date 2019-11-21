@@ -1,8 +1,8 @@
-[![Actions Status](https://github.com/cemkiy/action-islack/workflows/Main/badge.svg?branch=master)](https://github.com/cemkiy/action-islack/actions)
+[![Actions Status](https://github.com/cemkiy/action-slacker/workflows/Main/badge.svg?branch=master)](https://github.com/cemkiy/action-slacker/actions)
 
-# action-islack
+# action-slacker
 
-You can send slack message easily. islack is supported slack attachments.
+You can send slack message easily. slacker is supported slack attachments.
 Detail info:  https://api.slack.com/docs/messages/builder
 
 ## Configurations
@@ -30,7 +30,7 @@ jobs:
     - name: Slack notification
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-      uses: cemkiy/action-islack@master
+      uses: cemkiy/action-slacker@master
       with:
         # requirements fields for slack
         channel: '#channel-name'
@@ -54,9 +54,9 @@ jobs:
 
 ## Output
 
-islack has default output about your git event.
+slacker has default output about your git event.
 ```sh
-cemkiy/action-islack/Notification on push to master triggered by cemkiy (push)
+cemkiy/action-slacker/Notification on push to master triggered by cemkiy (push)
 ```
 
 If you set attachment fields, you should see advanced message in your slack. But default message is always sending.
@@ -70,7 +70,7 @@ If you want show different messages in your workflow, use success and failure fu
   if: failure()
   env:
     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-  uses: cemkiy/action-islack@master
+  uses: cemkiy/action-slacker@master
   with:
     channel: '#channel-name'
     icon_url: 'slack user icon url'
@@ -81,7 +81,7 @@ If you want show different messages in your workflow, use success and failure fu
   if: success()
   env:
     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-  uses: cemkiy/action-islack@master
+  uses: cemkiy/action-slacker@master
   with:
     channel: '#channel-name'
     icon_url: 'slack user icon url'

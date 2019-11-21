@@ -1,4 +1,4 @@
-name: 'action-islack'
+name: 'action-slacker'
 description: 'send slack notify'
 branding:
   icon: 'at-sign'
