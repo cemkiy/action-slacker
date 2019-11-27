@@ -1,7 +1,7 @@
 name: 'action-slacker'
-description: 'send slack notify'
+description: 'Send slack messages with attachments, auto username, branch and other actions'
 branding:
-  icon: 'at-sign'
+  icon: 'bell'
   color: 'purple'
 env:
   SLACK_WEBHOOK:
