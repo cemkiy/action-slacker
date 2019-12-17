@@ -70,6 +70,7 @@ async function run() {
         {
           "title": `${process.env.GITHUB_REPOSITORY}`,
           "title_link": `https://github.com/${process.env.GITHUB_REPOSITORY}`,
+          "color": attachment.color,
           "text": `${process.env.GITHUB_REF}`,
           "author_name": `${process.env.GITHUB_ACTOR}`,
     			"author_link": `https://github.com/${process.env.GITHUB_ACTOR}`,
