@@ -22,6 +22,7 @@
   "homepage": "https://github.com/cemkiy/action-slacker#readme",
   "dependencies": {
     "@actions/core": "^1.1.1",
+    "git-rev-sync": "^2.0.0",
     "slack-notify": "^0.1.7"
   },
   "devDependencies": {

@@ -1,4 +1,5 @@
 const core = require('@actions/core');
+const git = require('git-rev-sync');
 
 const SLACK_WEBHOOK = process.env.SLACK_WEBHOOK;
 const slack = require('slack-notify')(SLACK_WEBHOOK);
@@ -68,10 +69,10 @@ async function run() {
       text: `Github action (${process.env.GITHUB_WORKFLOW}) triggered\n`,
       attachments: [
         {
-          "title": `${process.env.GITHUB_REPOSITORY}`,
-          "title_link": `https://github.com/${process.env.GITHUB_REPOSITORY}`,
+          "title": `${process.env.GITHUB_REPOSITORY} -> ${process.env.GITHUB_REF}`,
+          "title_link": `https://github.com/${process.env.GITHUB_REPOSITORY}/tree/${git.branch()}`,
           "color": attachment.color,
-          "text": `${process.env.GITHUB_REF}`,
+          "text": git.message(),
           "author_name": `${process.env.GITHUB_ACTOR}`,
     			"author_link": `https://github.com/${process.env.GITHUB_ACTOR}`,
     			"author_icon": `https://github.com/${process.env.GITHUB_ACTOR}.png`,

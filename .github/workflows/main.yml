@@ -16,7 +16,7 @@ jobs:
       if: success()
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-      uses: cemkiy/action-slacker@master
+      uses: cemkiy/action-slacker@develop
       with:
         channel: '#team-devops'
         color: '#00FFAA'
@@ -28,7 +28,7 @@ jobs:
       if: failure()
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-      uses: cemkiy/action-slacker@master
+      uses: cemkiy/action-slacker@develop
       with:
         channel: '#team-devops'
         color: '#CC0000'
