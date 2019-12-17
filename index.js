@@ -70,7 +70,7 @@ async function run() {
       attachments: [
         {
           "title": `${process.env.GITHUB_REPOSITORY} -> ${process.env.GITHUB_REF}`,
-          "title_link": `https://github.com/${process.env.GITHUB_REPOSITORY}/tree/${git.branch()}`,
+          "title_link": `https://github.com/${process.env.GITHUB_REPOSITORY}}`,
           "color": attachment.color,
           "text": git.message(),
           "author_name": `${process.env.GITHUB_ACTOR}`,
