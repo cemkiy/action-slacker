@@ -65,7 +65,7 @@ async function run() {
       channel: channel,
       icon_url: icon_url,
       username: username,
-      text: `Github action (${process.env.GITHUB_WORKFLOW}) triggered\n`,
+      text: `GitHub action (${process.env.GITHUB_WORKFLOW}) triggered\n`,
       attachments: [
         {
           "title": `${process.env.GITHUB_REPOSITORY}`,
