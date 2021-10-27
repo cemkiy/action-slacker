@@ -11,51 +11,51 @@ inputs:
   fallback:
     description: 'Required plain-text summary of the attachment.'
     required: false
-  color":
+  color:
     description: 'tag color'
     required: false
     default: '#36a64f'
-  pretext":
+  pretext:
     description: 'Optional text that appears above the attachment block'
     required: false
-  author_name":
+  author_name:
     description: 'sender name'
     required: false
-  author_link":
+  author_link:
     description: 'sender profile link'
     required: false
-  author_icon":
+  author_icon:
     description: 'sender icon'
     required: false
-  title":
+  title:
     description: 'message title'
     required: false
-  title_link":
+  title_link:
     description: 'message title link'
     required: false
-  text":
+  text:
     description: 'message text'
     required: false
-  image_url":
+  image_url:
     description: 'image url'
     required: false
-  thumb_url":
+  thumb_url:
     description: 'thumb url'
     required: false
     default: '1000'
-  footer":
+  footer:
     description: 'footer text'
     required: false
-  footer_icon":
+  footer_icon:
     description: 'footer icon'
     required: false
-  channel":
+  channel:
     description: 'slack channel name with #'
     required: true
-  icon_url":
+  icon_url:
     description: 'slack user icon'
     required: true
-  username":
+  username:
     description: 'slack username'
     required: true
 outputs:
